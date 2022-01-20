@@ -1,13 +1,12 @@
-FROM ruby:2.6.5-alpine
+FROM ruby:3.0.3-alpine
 
 RUN apk add --update build-base git
 
-LABEL "repository"="https://github.com/andrewmcodes/standardrb-action"
-LABEL "maintainer"="Andrew Mason <andrewmcodes@protonmail.com>"
-LABEL "version"="0.0.2"
+LABEL "repository"="https://github.com/alfonsouceda/standardrb-action"
+LABEL "maintainer"="Alfonso Uceda <alfonso.pompa@oysterhr.com>"
+LABEL "version"="0.0.3"
 
 COPY lib /action/lib
-COPY README.md LICENSE /
 
 RUN gem install bundler
 
